@@ -108,6 +108,7 @@ a {
   max-width: 100%;
   box-sizing: border-box;
   column-gap: 50px;
+  margin: 50px;
 }
 #inner > div {
   display: flex;
@@ -130,7 +131,7 @@ a {
 }
 @media (min-width: 881px) {
   #inner {
-    width: 1075px;
+    width: 992px;
   }
   #inner img {
     max-width: 100%;
