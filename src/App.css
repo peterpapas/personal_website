@@ -174,7 +174,7 @@ a {
 }
 #links a {
   background-color: white;
-  max-width: 120px;
+  /* max-width: 120px; */
   padding: 15px 20px;
   font-size: 17px;
   letter-spacing: 2px;
@@ -194,6 +194,10 @@ a {
   #links a {
     padding: 15px 10px;
   }
+  #inner {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
 }
 @media (max-width: 400px) {
   #links a {
@@ -204,12 +208,11 @@ a {
 }
 #links svg {
   margin-right: 10px;
-  color: #ee7b1e;
-  fill: #ee7b1e;
+  color: #ffffff;
+  fill: #441eee;
 }
 h1 {
   font-size: 70px;
-  margin: 0 0 20px;
   font-weight: 700;
   color: #474747;
   white-space: nowrap;
@@ -220,4 +223,9 @@ h1 {
     text-align: center;
     margin-top: 36px;
   }
+}
+
+.image-style {
+  border-radius: 50%;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2), 0 0 0 4px rgba(255, 255, 255, 0.5);
 }
