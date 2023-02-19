@@ -76,7 +76,7 @@ function App() {
           </p>
           <div id="links" className="flex justify-center md:justify-start mt-6">
             <Button
-              href="https://github.com/papas-pano"
+              href="https://github.com/peterpapas"
               icon={<FontAwesomeIcon icon={brands("github")} size="lg" />}
               name="GitHub"
               className="mr-4"
