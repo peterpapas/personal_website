@@ -225,6 +225,46 @@ h1 {
   }
 }
 
+/* H1 animation START */
+h1 {
+  position: relative;
+  color: hsl(0, 0%, 100%);
+  font-weight: bold;
+  font-family: "Courier New", monospace;
+  letter-spacing: 6px;
+  overflow: hidden;
+  border-right: 2px solid hsl(0, 0%, 100%);
+  white-space: nowrap;
+  animation: typewriter 6s steps(30) 1s 1 normal both,
+    blinkTextCursor 600ms infinite;
+}
+
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 380px;
+  }
+  80% {
+    width: 380px;
+  }
+  100% {
+    width: 380px;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: hsl(0, 0%, 100%);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+/* H1 animation END */
+
 .image-style {
   border-radius: 50%;
   box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2), 0 0 0 4px rgba(255, 255, 255, 0.5);
