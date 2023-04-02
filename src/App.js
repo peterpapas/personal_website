@@ -50,7 +50,7 @@ function App() {
             Peter Papas
           </h1>
           <p
-            className={`biotext text-lg lg:text-xl ${
+            className={`biotext text-lg lg:text-lg ${
               darkMode ? "text-gray-400" : "text-gray-600"
             } leading-7`}
           >
