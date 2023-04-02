@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid, brands } from "@fortawesome/fontawesome-svg-core/import.macro";
@@ -15,7 +15,7 @@ function App() {
   return (
     <div
       id="app"
-      className={`h-screen flex items-center justify-center p-6 ${
+      className={`min-h-screen m-0 flex items-center justify-center p-6 ${
         darkMode
           ? "bg-gray-800"
           : "bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500"
@@ -23,12 +23,12 @@ function App() {
     >
       <div
         id="outer"
-        className={`rounded-xl ${
+        className={`w-full max-w-3xl mx-auto relative rounded-xl ${
           darkMode ? "bg-gray-800 bg-opacity-80" : "bg-white bg-opacity-60"
-        } backdrop-filter backdrop-blur-lg p-12 shadow-md flex flex-col md:flex-row gap-8`}
+        } backdrop-filter backdrop-blur-lg p-6 sm:p-8 md:p-12 shadow-md flex flex-col gap-8`}
       >
         <button
-          className={`absolute top-6 right-6 bg-white hover:bg-gray-200 rounded-md px-3 py-2 flex justify-center items-center ${
+          className={` absolute top-0 right-0 bg-white hover:bg-gray-200 rounded-md px-3 py-2 flex justify-center items-center ${
             darkMode ? "text-gray-800" : "text-gray-600"
           }`}
           onClick={toggleDarkMode}
@@ -50,7 +50,7 @@ function App() {
             Peter Papas
           </h1>
           <p
-            className={`text-lg lg:text-xl ${
+            className={`biotext text-lg lg:text-xl ${
               darkMode ? "text-gray-400" : "text-gray-600"
             } leading-7`}
           >

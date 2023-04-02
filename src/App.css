@@ -1,5 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app,
+#app > div {
+  /* min-height: 100vh; */
+  margin: 0;
+  width: 100%;
+}
+
+#root {
+  /* height: 100vh; */
+  min-height: 100vh;
+}
+
 .App {
   text-align: center;
+  /* height: 100%;
+  margin: 0; */
 }
 
 .App-logo {
@@ -15,7 +37,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,20 +125,34 @@ a {
   display: flex;
   align-items: center;
   justify-content: center; */
-  display: grid;
-  align-items: center;
-  justify-content: center;
+  /* margin: auto; */
+  /* display: grid; */
+  /* align-items: center;
+  justify-content: center; */
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
 }
 @media (min-width: 881px) {
   #outer {
-    height: 100%;
+    /* height: 100%; */
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 }
+
+@media (max-width: 480px) {
+  #outer {
+    width: 100%;
+  }
+}
+
 #inner {
-  display: flex;
+  flex: 1 0 33.333%;
   max-width: 100%;
   box-sizing: border-box;
   column-gap: 50px;
@@ -232,35 +268,7 @@ h1 {
   font-weight: bold;
   font-family: "Courier New", monospace;
   letter-spacing: 6px;
-  overflow: hidden;
-  border-right: 2px solid hsl(0, 0%, 100%);
-  white-space: nowrap;
-  animation: typewriter 6s steps(30) 1s 1 normal both,
-    blinkTextCursor 600ms infinite;
-}
-
-@keyframes typewriter {
-  0% {
-    width: 0;
-  }
-  50% {
-    width: 380px;
-  }
-  80% {
-    width: 380px;
-  }
-  100% {
-    width: 380px;
-  }
-}
-
-@keyframes blinkTextCursor {
-  from {
-    border-right-color: hsl(0, 0%, 100%);
-  }
-  to {
-    border-right-color: transparent;
-  }
+  /* overflow: hidden; */
 }
 
 /* H1 animation END */
@@ -268,4 +276,95 @@ h1 {
 .image-style {
   border-radius: 50%;
   box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2), 0 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Small devices (landscape phones) */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .App-header {
+    font-size: calc(10px + 1vmin);
+  }
+  .biotext {
+    /* width: 90vw; */
+    margin: auto;
+  }
+}
+
+/* Medium devices (tablets) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .App-header {
+    font-size: calc(10px + 1vmin);
+  }
+  #inner {
+    margin: 20px;
+    column-gap: 20px;
+  }
+  #inner img {
+    width: 100%;
+  }
+  #links {
+    /* flex-direction: column; */
+    row-gap: 10px;
+    align-items: center;
+  }
+}
+
+/* Large devices (desktops) */
+@media only screen and (min-width: 769px) {
+  .App-header {
+    font-size: calc(10px + 2vmin);
+  }
+  #inner {
+    margin: 50px;
+    column-gap: 50px;
+  }
+  #inner > div {
+    width: 50%;
+  }
+  #inner img {
+    max-width: 100%;
+  }
+  #links {
+    flex-direction: row;
+    row-gap: 0;
+    align-items: flex-end;
+  }
+}
+
+@media (max-width: 500px) {
+  html,
+  body {
+    height: 100vh;
+  }
+
+  .App-header {
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 400px) {
+  html,
+  body {
+    height: 100vh;
+  }
+
+  .App-header {
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 300px) {
+  html,
+  body {
+    height: 100vh;
+  }
+
+  .App-header {
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .inner {
+    flex: 1 0 100%;
+  }
 }
